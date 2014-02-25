@@ -1,0 +1,21 @@
+<h1>
+	<%= @user.fname + " " + @user.lname %>
+</h1>
+
+
+Gender:
+<%= @user.profile.gender %>
+<br>
+Religious Views:
+<%= @user.profile.religious_views %> 
+<br>
+Political Views:
+<%= @user.profile.political_views %>
+<br>
+<% @user.posts.each do |post| %>
+	<b><%=post.title %></b>
+	<br>
+	<%=post.post %>
+	<br><br>
+<% end %>
+
